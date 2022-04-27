@@ -35,6 +35,7 @@ I followed these links for tutorials and additional information;
 
 ![Jest](https://www.npmjs.com/package/jest)<br>
 ![Inquirer](https://www.npmjs.com/package/inquirer)<br>
+https://jestjs.io/docs/getting-started<br>
 
 ## License
 
