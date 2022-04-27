@@ -31,5 +31,5 @@ test("get email from method", () => {
 //tests whether employee is received through getRole method
 test("get employee from role", () => {
 	const employee = new Employee("Elsie", 100, "elsie.may@gmail.com");
-	expect(employee.getRole()).toEqual(Employee);
+	expect(employee.getRole()).toEqual("Employee");
 });
