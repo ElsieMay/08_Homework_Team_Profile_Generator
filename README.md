@@ -33,8 +33,8 @@ I was aided by the BCS Learning assistant. They instructed me well.
 
 I followed these links for tutorials and additional information;
 
-![Jest](https://www.npmjs.com/package/jest)<br>
-![Inquirer](https://www.npmjs.com/package/inquirer)<br>
+https://www.npmjs.com/package/jest<br>
+https://www.npmjs.com/package/inquirer<br>
 https://jestjs.io/docs/getting-started<br>
 https://stackoverflow.com/questions/4308610/how-to-ignore-certain-files-in-git<br>
 https://javascript.info/class<br>
