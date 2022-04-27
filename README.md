@@ -40,6 +40,7 @@ https://stackoverflow.com/questions/4308610/how-to-ignore-certain-files-in-git<b
 https://javascript.info/class<br>
 https://rollbar.com/blog/javascript-constructors/<br>
 https://jestjs.io/docs/cli#options<br>
+https://jestjs.io/docs/expect<br>
 
 ## License
 
