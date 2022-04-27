@@ -39,6 +39,7 @@ https://jestjs.io/docs/getting-started<br>
 https://stackoverflow.com/questions/4308610/how-to-ignore-certain-files-in-git<br>
 https://javascript.info/class<br>
 https://rollbar.com/blog/javascript-constructors/<br>
+https://jestjs.io/docs/cli#options<br>
 
 ## License
 
