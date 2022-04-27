@@ -1,0 +1,25 @@
+{
+  "name": "08_homework_team_profile_generator",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "node index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElsieMay/08_Homework_Team_Profile_Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElsieMay/08_Homework_Team_Profile_Generator/issues"
+  },
+  "homepage": "https://github.com/ElsieMay/08_Homework_Team_Profile_Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.3"
+  },
+  "devDependencies": {
+    "jest": "^28.0.2"
+  }
+}

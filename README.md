@@ -33,7 +33,8 @@ I was aided by the BCS Learning assistant. They instructed me well.
 
 I followed these links for tutorials and additional information;
 
-https://sebhastian.com/git-ignore-node_modules/<br>
+![Jest](https://www.npmjs.com/package/jest)<br>
+![Inquirer](https://www.npmjs.com/package/inquirer)<br>
 
 ## License
 
