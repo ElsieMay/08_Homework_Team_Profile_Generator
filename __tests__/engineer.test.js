@@ -1,4 +1,4 @@
-//requires Employee module
+//requires Engineer module
 const Engineer = require("../lib/Engineer");
 
 //tests whether gitHub is received through getGithub method
@@ -9,6 +9,6 @@ test("get github string from method", () => {
 
 //tests whether employee is received through getRole method
 test("get employee from role", () => {
-	const employee = new Employee("Elsie", 100, "elsie.may@gmail.com");
+	const employee = new Engineer("Elsie", 100, "elsie.may@gmail.com");
 	expect(employee.getRole()).toEqual("Engineer");
 });
