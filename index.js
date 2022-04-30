@@ -39,5 +39,21 @@ const promptManager = () => {
 				}
 			},
 		},
+		{
+			type: "input",
+			name: "id",
+			message: "Please enter the manager's ID number.",
+			validate: (emailInput) => {
+				const validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+				if (emailInput.value.match(validEmail)) {
+					console.log("Valid email address!");
+					return true;
+				} else {
+					console.log("Invalid email address!");
+					return false;
+				}
+			},
+		},
 	]);
 };
+promptManager();
