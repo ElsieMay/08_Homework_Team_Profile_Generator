@@ -41,6 +41,7 @@ https://javascript.info/class<br>
 https://rollbar.com/blog/javascript-constructors/<br>
 https://jestjs.io/docs/cli#options<br>
 https://jestjs.io/docs/expect<br>
+https://mkyong.com/javascript/check-if-variable-is-a-number-in-javascript/<br>
 
 ## License
 
