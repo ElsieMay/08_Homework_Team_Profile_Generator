@@ -9,4 +9,23 @@
 	justify-content: center;
 	margin: 40px;
 	font-size: 32px;
+	color: darkslategrey;
+	height: 150px;
+}
+
+/*These apply to the cards section*/
+.cards {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*These properties apply to the cards*/
+.card {
+	margin: 40px;
+	background-color: thistle;
+	box-shadow: 5px 10px #888888;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
