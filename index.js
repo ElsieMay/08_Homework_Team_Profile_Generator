@@ -10,6 +10,8 @@ const Intern = require("./lib/Intern");
 //HTML generated
 const generateHTML = require("./src/generateHTML");
 
+const teamMembers=[];
+
 // Uses inquirer to generate questions
 const promptManager = () => {
 	return inquirer.prompt([
@@ -41,12 +43,11 @@ const promptManager = () => {
 		},
 		{
 			type: "input",
-			name: "id",
-			message: "Please enter the manager's ID number.",
+			name: "email",
+			message: "Please enter the manager's email address.",
 			validate: (emailInput) => {
-				const validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-				if (emailInput.value.match(validEmail)) {
-					console.log("Valid email address!");
+				const validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(emailInput);
+				if (validEmail) {
 					return true;
 				} else {
 					console.log("Invalid email address!");
@@ -55,5 +56,10 @@ const promptManager = () => {
 			},
 		},
 	]);
+    .then(managerInfo => {
+    const {name, id, email} = managerInfo;
+    const manager = new Manager(name,id, email);
+    teamMembers.push(manager);
+    });
 };
 promptManager();
