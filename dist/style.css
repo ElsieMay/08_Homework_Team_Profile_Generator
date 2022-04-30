@@ -1,0 +1,12 @@
+/*These apply to the whole page*/
+* {
+	font-family: "Open Sans", sans-serif;
+	line-height: 1;
+}
+/*These are the navbar properties*/
+#navbar {
+	display: flex;
+	justify-content: center;
+	margin: 40px;
+	font-size: 32px;
+}
