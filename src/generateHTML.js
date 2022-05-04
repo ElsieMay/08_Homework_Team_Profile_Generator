@@ -5,10 +5,11 @@ const path = require("path");
 
 // const indexHTML = path.resolve("../dist/index.html");
 
-//generates Engineer card
-const generateEngineer = (Engineer) => {
-	return;
-	`<div class="card" style="width: 18rem">
+function generate() {
+	//generates Engineer card
+	const generateEngineer = (Engineer) => {
+		return `
+	<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">${Engineer.name}</h5>
 					<p class="card-text">Engineer</p>
@@ -22,12 +23,12 @@ const generateEngineer = (Engineer) => {
 					<a href="#" class="card-link">Email: <a href="mailto:${Engineer.email}">${Engineer.email}</a>
 				</div>
 			</div>`;
-};
+	};
 
-//generates Manager card
-const generateManager = (Manager) => {
-	return;
-	`<div class="card" style="width: 18rem">
+	//generates Manager card
+	const generateManager = (Manager) => {
+		return `
+	<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">${Manager.name}</h5>
 					<p class="card-text">Manager</p>
@@ -41,12 +42,12 @@ const generateManager = (Manager) => {
 					<a href="#" class="card-link">Email: <a href="mailto:${Manager.email}">${Manager.email}</a>
 				</div>
 			</div>`;
-};
+	};
 
-//generates Intern card
-const generateIntern = (Intern) => {
-	return;
-	`<div class="card" style="width: 18rem">
+	//generates Intern card
+	const generateIntern = (Intern) => {
+		return `
+	<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">${Intern.name}</h5>
 					<p class="card-text">Manager</p>
@@ -60,47 +61,47 @@ const generateIntern = (Intern) => {
 					<a href="#" class="card-link">Email: <a href="mailto:${Intern.email}">${Intern.email}</a>
 				</div>
 			</div>`;
-};
+	};
 
-//function to push data
-generateData = (data) => {
-	//array for all card HTML
-	cardHTML = [];
+	//function to push data
+	generateData = (data) => {
+		//array for all card HTML
+		cardHTML = [];
 
-	//for loop to loop through employees
-	for (let index = 0; index < data.length; index++) {
-		const Employee = data[index];
-		const getRole = Employee.getRole();
+		//for loop to loop through employees
+		for (let index = 0; index < data.length; index++) {
+			const Employee = data[index];
+			const getRole = Employee.getRole();
 
-		//if statement for Manager Card
-		if (role === "Manager") {
-			const managerHTML = generateManager(Employee);
+			//if statement for Manager Card
+			if (role === "Manager") {
+				const managerHTML = generateManager(Employee);
 
-			cardHTML.push(managerHTML);
+				cardHTML.push(managerHTML);
+			}
+			//if statement for Engineer Card
+			if (role === "Engineer") {
+				const engineerHTML = generateEngineer(Employee);
+
+				cardHTML.push(engineerHTML);
+			}
+			//if statement for Engineer Card
+			if (role === "Intern") {
+				const internHTML = generateIntern(Employee);
+
+				cardHTML.push(internHTML);
+			}
 		}
-		//if statement for Engineer Card
-		if (role === "Engineer") {
-			const engineerHTML = generateEngineer(Employee);
+		//joins HTML strings
+		const employeeRender = cardHTML.join("");
 
-			cardHTML.push(engineerHTML);
-		}
-		//if statement for Engineer Card
-		if (role === "Intern") {
-			const internHTML = generateIntern(Employee);
+		//generates title and placement of cards
+		const generateTitle = pageTitle(cards);
+		return generateTitle;
+	};
 
-			cardHTML.push(internHTML);
-		}
-	}
-	//joins HTML strings
-	const employeeRender = cardHTML.join("");
-
-	//generates title and placement of cards
-	const generateTitle = pageTitle(cards);
-	return generateTitle;
-};
-
-const pageTitle = (cards) => {
-	return `
+	const pageTitle = (cards) => {
+		return `
     <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -127,10 +128,7 @@ const pageTitle = (cards) => {
 	</body>
 </html>
 `;
-};
+	};
+}
 
-// const renderMain = (pageHTML) => {
-// 	const render = fs.readFileSync(
-// 		path.resolve("indexHTML")
-// 	)
-// }
+module.exports = generate;

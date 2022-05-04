@@ -7,6 +7,8 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
+const generateHTML = require("./src/generateHTML");
+
 const teamMembers = [];
 
 // Uses inquirer to generate questions
@@ -91,7 +93,13 @@ const addEmployee = () => {
 			} else if (list.employee === "Intern") {
 				promptIntern();
 			} else {
-				writeFile();
+				fs.writeFile("./src/index.html", generateHTML, (err) => {
+					if (err) console.log(err);
+					else {
+						console.log("File written successfully");
+						console.log(fs.readFileSync("./src/index.html", "utf8"));
+					}
+				});
 			}
 		});
 };
@@ -224,16 +232,8 @@ function promptIntern() {
 		});
 }
 
-//Writes HTML files using file system
-let generateHTML = "./src/generateHTML";
-
-fs.writeFile("./src/index.html", generateHTML, (err) => {
-	if (err) console.log(err);
-	else {
-		console.log("File written successfully");
-		console.log(fs.readFileSync("./src/index.html", "utf8"));
-	}
-});
+// //Writes HTML files using file system
+// let generateHTML = "./src/generateHTML";
 
 //Starts prompts
 promptManager();

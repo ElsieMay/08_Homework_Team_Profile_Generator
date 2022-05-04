@@ -17,6 +17,7 @@
 	},
 	"homepage": "https://github.com/ElsieMay/08_Homework_Team_Profile_Generator#readme",
 	"dependencies": {
+		"@babel/plugin-transform-modules-commonjs": "^7.17.9",
 		"inquirer": "^8.2.3"
 	},
 	"devDependencies": {
