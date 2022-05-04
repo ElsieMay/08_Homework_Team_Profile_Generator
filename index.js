@@ -7,10 +7,6 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
-//HTML generated
-const generateHTML = require("./src/generateHTML");
-const { error } = require("console");
-
 const teamMembers = [];
 
 // Uses inquirer to generate questions
@@ -75,6 +71,7 @@ const promptManager = () => {
 			const { name, id, email, officeNumber } = managerInfo;
 			const manager = new Manager(name, id, email, officeNumber);
 			teamMembers.push(manager);
+			addEmployee();
 		});
 };
 
@@ -169,12 +166,12 @@ function promptIntern() {
 			{
 				type: "input",
 				name: "name",
-				message: "Please enter the itern's name.",
+				message: "Please enter the intern's name.",
 				validate: (nameInput) => {
 					if (nameInput) {
 						return true;
 					} else {
-						console.log("An itern name is required.");
+						console.log("An intern name is required.");
 						return false;
 					}
 				},
@@ -182,7 +179,7 @@ function promptIntern() {
 			{
 				type: "input",
 				name: "id",
-				message: "Please enter the itern's ID number.",
+				message: "Please enter the intern's ID number.",
 				validate: (idInput) => {
 					if (isNaN(idInput)) {
 						console.log(idInput + "Please enter correct ID number.");
@@ -195,7 +192,7 @@ function promptIntern() {
 			{
 				type: "input",
 				name: "email",
-				message: "Please enter the itern's email address.",
+				message: "Please enter the intern's email address.",
 				validate: (emailInput) => {
 					const validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 					if (validEmail) {
@@ -221,22 +218,22 @@ function promptIntern() {
 			},
 		])
 		.then((list) => {
-			const engineer = new Intern(list.name, list.id, list.email, list.school);
+			const intern = new Intern(list.name, list.id, list.email, list.school);
 			teamMembers.push(intern);
 			addEmployee();
 		});
 }
 
 //Writes HTML files using file system
-const writeFile = (data) => {
-	fs.writeFile("./dist/index.html", data, (error) => {
-		if (error) {
-			console.log("An error has occurred.");
-		} else {
-			console.log("✔️  Successfully wrote to README.md");
-		}
-	});
-};
+let generateHTML = "./src/generateHTML";
+
+fs.writeFile("./src/index.html", generateHTML, (err) => {
+	if (err) console.log(err);
+	else {
+		console.log("File written successfully");
+		console.log(fs.readFileSync("./src/index.html", "utf8"));
+	}
+});
 
 //Starts prompts
 promptManager();
