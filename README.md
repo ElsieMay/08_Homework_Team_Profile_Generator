@@ -46,6 +46,7 @@ https://www.simplilearn.com/tutorials/javascript-tutorial/email-validation-in-ja
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then<br>
 https://getbootstrap.com/docs/4.0/components/navbar/#nav<br>
 https://getbootstrap.com/docs/4.0/components/card/<br>
+https://fontawesome.com/icons/<br>
 
 ## License
 

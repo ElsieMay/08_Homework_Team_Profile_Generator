@@ -5,7 +5,7 @@ const Employee = require("../lib/Employee");
 test("instantiated object properties", () => {
 	const employee = new Employee("Elsie", 100, "elsie.may@gmail.com");
 	expect(typeof employee.name).toBe("string");
-	expect(typeof employee.id).toBeTruthy();
+	expect(typeof employee.id).toBe("number");
 	expect(typeof employee.email).toBe("string");
 });
 
@@ -19,7 +19,7 @@ test("get name from method", () => {
 //tests whether id is received through getId method
 test("get id from method", () => {
 	const employee = new Employee("Elsie", 100, "elsie.may@gmail.com");
-	expect(employee.getId()).toBeTruthy();
+	expect(employee.getId()).toBe("number");
 });
 
 //tests whether email is received through getEmail method
