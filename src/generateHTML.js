@@ -23,4 +23,23 @@ const generateEngineer = function (Engineer) {
 			</div>`;
 };
 
+//generates Manager card
+const generateManager = function (Manager) {
+	return;
+	`<div class="card" style="width: 18rem">
+				<div class="card-body">
+					<h5 class="card-title">${Manager.name}</h5>
+					<p class="card-text">Manager</p>
+					<i class="fa-solid fa-mug-hot"></i>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">Id: ${Manager.id}</li>
+                    <li class="list-group-item">Office Number: ${Manager.officeNumber}</li>
+				</ul>
+				<div class="card-body">
+					<a href="#" class="card-link">Email: <a href="mailto:${Manager.email}">${Manager.email}</a>
+				</div>
+			</div>`;
+};
+
 module.exports = generateHTML;
