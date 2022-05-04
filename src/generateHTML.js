@@ -1,8 +1,9 @@
 //node modules
 const inquirer = require("inquirer");
 const fs = require("fs");
+const path = require("path");
 
-const indexHTML = require("./dist/index.html");
+// const indexHTML = path.resolve("../dist/index.html");
 
 //generates Engineer card
 const generateEngineer = (Engineer) => {
@@ -128,4 +129,8 @@ const pageTitle = (cards) => {
 `;
 };
 
-module.exports = generateHTML;
+// const renderMain = (pageHTML) => {
+// 	const render = fs.readFileSync(
+// 		path.resolve("indexHTML")
+// 	)
+// }
