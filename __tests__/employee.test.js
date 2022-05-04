@@ -19,7 +19,7 @@ test("get name from method", () => {
 //tests whether id is received through getId method
 test("get id from method", () => {
 	const employee = new Employee("Elsie", 100, "elsie.may@gmail.com");
-	expect(employee.getId()).toBe("number");
+	expect(employee.getId()).toEqual(expect.any(Number));
 });
 
 //tests whether email is received through getEmail method
