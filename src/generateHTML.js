@@ -5,7 +5,7 @@ const fs = require("fs");
 const indexHTML = require("./dist/index.html");
 
 //generates Engineer card
-const generateEngineer = function (Engineer) {
+const generateEngineer = (Engineer) => {
 	return;
 	`<div class="card" style="width: 18rem">
 				<div class="card-body">
@@ -24,7 +24,7 @@ const generateEngineer = function (Engineer) {
 };
 
 //generates Manager card
-const generateManager = function (Manager) {
+const generateManager = (Manager) => {
 	return;
 	`<div class="card" style="width: 18rem">
 				<div class="card-body">
@@ -38,6 +38,25 @@ const generateManager = function (Manager) {
 				</ul>
 				<div class="card-body">
 					<a href="#" class="card-link">Email: <a href="mailto:${Manager.email}">${Manager.email}</a>
+				</div>
+			</div>`;
+};
+
+//generates Intern card
+const generateIntern = (Intern) => {
+	return;
+	`<div class="card" style="width: 18rem">
+				<div class="card-body">
+					<h5 class="card-title">${Intern.name}</h5>
+					<p class="card-text">Manager</p>
+                    <i class="fa-solid fa-graduation-cap"></i>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">Id: ${Intern.id}</li>
+                    <li class="list-group-item">School: ${Intern.school}</li>
+				</ul>
+				<div class="card-body">
+					<a href="#" class="card-link">Email: <a href="mailto:${Intern.email}">${Intern.email}</a>
 				</div>
 			</div>`;
 };
