@@ -77,6 +77,7 @@ const promptManager = () => {
 		});
 };
 
+//gives prompt options
 const addEmployee = () => {
 	return inquirer
 		.prompt([
@@ -105,6 +106,7 @@ const addEmployee = () => {
 		});
 };
 
+//prompt to enter engineer details
 function promptEngineer() {
 	inquirer
 		.prompt([
@@ -169,6 +171,7 @@ function promptEngineer() {
 		});
 }
 
+//prompt to enter manager details
 function promptIntern() {
 	inquirer
 		.prompt([

@@ -30,11 +30,13 @@
 	align-items: center;
 }
 
+/*These properties apply to the card body*/
 .card-body {
 	flex-direction: column;
 	text-align: center;
 }
 
+/*These properties apply to font awesome icons*/
 .fa-solid {
 	display: flex;
 	justify-content: center;
