@@ -93,7 +93,8 @@ const addEmployee = () => {
 			} else if (list.employee === "Intern") {
 				promptIntern();
 			} else {
-				fs.writeFile("./src/index.html", generateHTML, (err) => {
+				// //Writes HTML files using file system
+				fs.writeFile("./src/index.html", generateHTML(teamMembers), (err) => {
 					if (err) console.log(err);
 					else {
 						console.log("File written successfully");
@@ -231,9 +232,6 @@ function promptIntern() {
 			addEmployee();
 		});
 }
-
-// //Writes HTML files using file system
-// let generateHTML = "./src/generateHTML";
 
 //Starts prompts
 promptManager();

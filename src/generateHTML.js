@@ -5,11 +5,12 @@ const path = require("path");
 
 // const indexHTML = path.resolve("../dist/index.html");
 
-function generate() {
+function generate(teamMembers) {
 	//generates Engineer card
 	const generateEngineer = (Engineer) => {
 		return `
-	<div class="card" style="width: 18rem">
+		<section class="cards">
+		<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">${Engineer.name}</h5>
 					<p class="card-text">Engineer</p>
@@ -28,7 +29,8 @@ function generate() {
 	//generates Manager card
 	const generateManager = (Manager) => {
 		return `
-	<div class="card" style="width: 18rem">
+		<section class="cards">
+		<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">${Manager.name}</h5>
 					<p class="card-text">Manager</p>
@@ -47,7 +49,8 @@ function generate() {
 	//generates Intern card
 	const generateIntern = (Intern) => {
 		return `
-	<div class="card" style="width: 18rem">
+		<section class="cards">
+		<div class="card" style="width: 18rem">
 				<div class="card-body">
 					<h5 class="card-title">${Intern.name}</h5>
 					<p class="card-text">Manager</p>
@@ -74,26 +77,26 @@ function generate() {
 			const getRole = Employee.getRole();
 
 			//if statement for Manager Card
-			if (role === "Manager") {
+			if (getRole === "Manager") {
 				const managerHTML = generateManager(Employee);
 
 				cardHTML.push(managerHTML);
 			}
 			//if statement for Engineer Card
-			if (role === "Engineer") {
+			if (getRole === "Engineer") {
 				const engineerHTML = generateEngineer(Employee);
 
 				cardHTML.push(engineerHTML);
 			}
 			//if statement for Engineer Card
-			if (role === "Intern") {
+			if (getRole === "Intern") {
 				const internHTML = generateIntern(Employee);
 
 				cardHTML.push(internHTML);
 			}
 		}
 		//joins HTML strings
-		const employeeRender = cardHTML.join("");
+		const cards = cardHTML.join("");
 
 		//generates title and placement of cards
 		const generateTitle = pageTitle(cards);
@@ -112,23 +115,19 @@ function generate() {
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
 		<script src="https://kit.fontawesome.com/2c4df21959.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="../dist/style.css" />
 		<title>Team Profiles</title>
 	</head>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd" id="navbar">My Team</nav>
 	</header>
 	<body>
-		<section class="cards">
-			<div class="card" style="width: 18rem">
-				<div class="card-body">
                 ${cards}
-			</div>
-		</section>
 	</body>
 </html>
 `;
 	};
+	return generateData(teamMembers);
 }
 
 module.exports = generate;
