@@ -15,7 +15,7 @@ I learnt about using node js, Inquirer, file system, command line, markdowns and
 
 ## Installation
 
-The project can be viewed via this link, https://github.com/ElsieMay/07_Homework_Professional_README_Generator. The steps one can take to install this application include: clone repo, run npm init, install dependancies and run node index.js, answering prompts when questioned.
+The project can be viewed via this link, https://github.com/ElsieMay/07_Homework_Professional_README_Generator. The steps one can take to install this application include: clone repo, run npm init, install dependancies and run node index.js, answering prompts when questioned. This will generate an index.html file, which will be located in the src folder.
 
 ## Usage
 
@@ -25,7 +25,15 @@ Run node index.js and answer prompts to create a README.md file.
 
 ![Demo](https://github.com/ElsieMay/10_Homework_Team_Profile_Generator/blob/main/images/Screen%20Recording%202022-05-06%20at%2010.11.23%20pm.gif)
 
-![Screenshot](https://github.com/ElsieMay/07_Homework_Professional_README_Generator/blob/main/images/Screen%20Shot%202022-04-26%20at%2010.29.05%20pm.png)
+![Screenshot](https://github.com/ElsieMay/10_Homework_Team_Profile_Generator/blob/main/images/Screen%20Shot%202022-05-07%20at%209.00.13%20am.png)
+
+![Screenshot](https://github.com/ElsieMay/10_Homework_Team_Profile_Generator/blob/main/images/Screen%20Shot%202022-05-07%20at%209.00.26%20am.png)
+
+![Screenshot](https://github.com/ElsieMay/10_Homework_Team_Profile_Generator/blob/main/images/Screen%20Shot%202022-05-07%20at%209.00.32%20am.png)
+
+![Screenshot](https://github.com/ElsieMay/10_Homework_Team_Profile_Generator/blob/main/images/Screen%20Shot%202022-05-07%20at%209.00.37%20am.png)
+
+![Screenshot](https://github.com/ElsieMay/10_Homework_Team_Profile_Generator/blob/main/images/Screen%20Shot%202022-05-07%20at%209.00.42%20am.png)
 
 ## Credits
 
